@@ -1,7 +1,15 @@
 'use client'
 
+import { Banner1 } from "@/components/Banner1"
+import { Header } from "@/components/Header"
+import { ListagemVideos } from "@/components/ListagemVideos"
+
 export default function Home() {
   return (
-    <h1>Titulo</h1>
+    <>
+      <Header />
+      <Banner1/>
+      <ListagemVideos/>
+    </>
   )
 }
