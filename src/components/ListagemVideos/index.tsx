@@ -4,6 +4,7 @@ import { useState } from "react"
 import { styled } from "styled-components"
 import { CardVideo } from "./CardVideo"
 import { BotaoFiltro } from "./BotaoFiltro"
+import dadosVideos from './dadosVideos.json'
 
 const Container = styled.div`
   margin: 3% 15%;
@@ -29,20 +30,6 @@ interface Ivideos {
   url: string
 }
 
-const videos = [
-  { titulo: 'Como aumentar sua Gereação de Leads feat. Traktor', categoria: 'Agências', url: 'https://url' },
-  { titulo: 'Como aumentar sua Gereação de Leads feat. Traktor', categoria: 'Agências', url: 'https://url' },
-  { titulo: 'Como aumentar sua Gereação de Leads feat. Traktor', categoria: 'Chatbot', url: 'https://url' },
-  { titulo: 'Como aumentar sua Gereação de Leads feat. Traktor', categoria: 'Chatbot', url: 'https://url' },
-  { titulo: 'Como aumentar sua Gereação de Leads feat. Traktor', categoria: 'Chatbot', url: 'https://url' },
-  { titulo: 'Como aumentar sua Gereação de Leads feat. Traktor', categoria: 'Marketing Digital', url: 'https://url' },
-  { titulo: 'Como aumentar sua Gereação de Leads feat. Traktor', categoria: 'Marketing Digital', url: 'https://url' },
-  { titulo: 'Como aumentar sua Gereação de Leads feat. Traktor', categoria: 'Gereção de Leads', url: 'https://url' },
-  { titulo: 'Como aumentar sua Gereação de Leads feat. Traktor', categoria: 'Gereção de Leads', url: 'https://url' },
-  { titulo: 'Como aumentar sua Gereação de Leads feat. Traktor', categoria: 'Mídia Paga', url: 'https://url' },
-  { titulo: 'Como aumentar sua Gereação de Leads feat. Traktor', categoria: 'Mídia Paga', url: 'https://url' },
-]
-
 const categorias = [
   'Agências',
   'Chatbot',
@@ -52,7 +39,7 @@ const categorias = [
 ]
 
 export const UseVideos = () => {
-  return videos;
+  return dadosVideos;
 }
 
 export const getVideosFiltrados = (
