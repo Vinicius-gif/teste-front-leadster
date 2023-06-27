@@ -7,7 +7,7 @@ import { BotaoFiltro } from "./BotaoFiltro"
 import dadosVideos from './dadosVideos.json'
 
 const Container = styled.div`
-  margin: 3% 15%;
+  margin: 3% 18%;
 `
 
 const ContainerFiltros = styled.div`
@@ -20,14 +20,16 @@ const ContainerBotoes = styled.section`
 `
 
 const ContainerVideos = styled.div`
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 30px;
+  margin: 50px 0px;
 `
 
 interface Ivideos {
   titulo: string,
-  categoria: string,
-  url: string
+  categoria: string
 }
 
 const categorias = [
