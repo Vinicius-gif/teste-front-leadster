@@ -7,15 +7,16 @@ interface ButtonProps {
 
 const Botao = styled.button<ButtonProps>`
   font-size: 15px;
-  font-family: inherit;
   font-weight: 500;
+  font-family: "Plus Jakarta Sans";
   text-align: center;
   background: ${(props) => (props.$clicked ? 'var(--azul)' : 'none')};
   border: ${(props) => (props.$clicked ? 'none' : 'solid 1px var(--preto)')} ;
   border-radius: 16px;
   color:  ${(props) => (props.$clicked ? '#eceef0' : 'var(--preto)')};
   padding: 5px 10px;
-  margin: 10px 5px;
+  margin: 0px 5px;
+  height: 40px;
   cursor: pointer;
   
   &:hover {
@@ -27,7 +28,7 @@ const Botao = styled.button<ButtonProps>`
 interface Props {
   $clicked: boolean,
   onClick: () => void,
-  children: string
+  children: any
 
 }
 

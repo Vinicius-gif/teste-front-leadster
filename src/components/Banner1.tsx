@@ -10,7 +10,6 @@ const Container = styled.div`
   padding: 100px 0px;
 `
 const Webnar = styled.p`
-  font-family: inherit;
   font-weight: 400;
   font-size: medium;
   color: var(--azul);
@@ -20,28 +19,24 @@ const Webnar = styled.p`
   margin: 5px;
 `
 const Paragrafo1 = styled.h2`
-  font-family: inherit;
   font-weight: 600;
   font-size: 40px;
   color: var(--preto);
 `
 const Paragrafo2 = styled.h2`
-  font-family: inherit;
   font-weight: 600;
-  font-size: 60px;
+  font-size: 65px;
   color: var(--azul);
-  margin-left: 30px;
   border-bottom: solid 1px #cac1c1;
 `
 const Icone = styled.img`
+  margin-left: -28px;
   vertical-align: text-top;
 `
 const Paragrafo3 = styled.p`
-  font-family: inherit;
   font-weight: 400;
   font-size: 13px;
   color: var(--preto);
-  margin-left: 30px;
   padding-top: 15px;
 `
 

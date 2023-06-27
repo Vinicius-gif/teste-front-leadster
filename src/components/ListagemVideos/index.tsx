@@ -4,7 +4,8 @@ import { useState } from "react"
 import { styled } from "styled-components"
 import { CardVideo } from "./CardVideo"
 import { BotaoFiltro } from "./BotaoFiltro"
-import dadosVideos from './dadosVideos.json'
+import dadosVideos from '../../../public/dadosVideos.json'
+import { SelectFiltro } from "./SelectFiltro"
 
 const Container = styled.div`
   margin: 3% 18%;
@@ -13,6 +14,7 @@ const Container = styled.div`
 const ContainerFiltros = styled.div`
   display: flex;
   justify-content: space-between;
+  align-items: center;
 `
 
 const ContainerBotoes = styled.section`
@@ -24,7 +26,10 @@ const ContainerVideos = styled.div`
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
   gap: 30px;
-  margin: 50px 0px;
+  margin: 20px 0px;
+  border-bottom: solid 1px #c7bfbf;
+  border-top: solid 1px #c7bfbf;
+  padding: 40px 0px;
 `
 
 interface Ivideos {
@@ -80,7 +85,7 @@ export const ListagemVideos = () => {
             )
           })}
         </ContainerBotoes>
-        <h2>aaaaaaaaa</h2>
+        <SelectFiltro/>
       </ContainerFiltros>
       <ContainerVideos>
         {videosFiltrados.map((video, index) => (
