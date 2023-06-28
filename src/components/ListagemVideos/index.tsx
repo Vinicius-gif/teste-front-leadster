@@ -4,8 +4,9 @@ import { useState } from "react"
 import { styled } from "styled-components"
 import { CardVideo } from "./CardVideo"
 import { BotaoFiltro } from "./BotaoFiltro"
-import dadosVideos from '../../../public/dadosVideos.json'
 import { SelectFiltro } from "./SelectFiltro"
+import { Paginacao } from "./Paginacao"
+import dadosVideos from '../../../public/dadosVideos.json'
 
 const Container = styled.div`
   margin: 3% 18%;
@@ -92,6 +93,7 @@ export const ListagemVideos = () => {
           <CardVideo key={index} title={video.titulo} content='conteúdo' />
         ))}
       </ContainerVideos>
+      <Paginacao quantidade={4}/>
     </Container>
   )
 }

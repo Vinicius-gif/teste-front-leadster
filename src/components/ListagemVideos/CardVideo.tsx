@@ -16,6 +16,7 @@ const CardTitle = styled.h2`
 
 const Thumbnail = styled.img`
   border-radius: 12px;
+  border-bottom: none;
   width: 100%;
 `;
 
