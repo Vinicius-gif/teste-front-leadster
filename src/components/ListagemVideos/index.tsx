@@ -18,9 +18,7 @@ const ContainerFiltros = styled.div`
   align-items: center;
 `
 
-const ContainerBotoes = styled.section`
-
-`
+const ContainerBotoes = styled.section``
 
 const ContainerVideos = styled.div`
   display: grid;

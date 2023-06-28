@@ -24,9 +24,11 @@ const Paragrafo1 = styled.h2`
   color: var(--preto);
 `
 const Paragrafo2 = styled.h2`
+  background: linear-gradient(-45deg, #2c83fb, #1f76f0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   font-weight: 600;
   font-size: 65px;
-  color: var(--azul);
   border-bottom: solid 1px #cac1c1;
 `
 const Icone = styled.img`
