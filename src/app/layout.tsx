@@ -1,14 +1,13 @@
 import { ReactNode } from 'react'
 import './globalStyles.css'
 
-export const metadata = {
-  title: 'Teste Leadster'
-}
-
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
       <html lang="en" suppressHydrationWarning={true}>
-        <head />
+        <head>
+          <title>Teste Leadster</title>
+          <link rel="icon" href="/icon.png" sizes="any" />
+        </head>
         <body>
           {children}
         </body>
