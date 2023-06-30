@@ -11,6 +11,6 @@ export const useModal = () => {
     setShowModal(false);
   };
 
-  return {showModal, setShowModal, handleOpenModal, handleCloseModal}
+  return {showModal, handleOpenModal, handleCloseModal}
 }
 
