@@ -6,7 +6,11 @@ import { CardVideo } from "./CardVideo"
 import { BotaoFiltro } from "./BotaoFiltro"
 import { SelectFiltro } from "./SelectFiltro"
 import { Paginacao } from "./Paginacao"
-import dadosVideos from '../../../public/dadosVideos.json'
+import { useVideos } from "@/hooks/useVideos"
+import { useFiltrarVideos } from "@/hooks/useFiltrarVideos"
+import dadosCategorias from "../../../public/dadosCategorias.json"
+import { useModal } from "@/hooks/useModal"
+import { Modal } from "./Modal"
 
 const Container = styled.div`
   margin: 3% 18%;
@@ -31,34 +35,11 @@ const ContainerVideos = styled.div`
   padding: 40px 0px;
 `
 
-interface Ivideos {
-  titulo: string,
-  categoria: string
-}
-
-const categorias = [
-  'Agências',
-  'Chatbot',
-  'Marketing Digital',
-  'Gereção de Leads',
-  'Mídia Paga'
-]
-
-export const UseVideos = () => {
-  return dadosVideos;
-}
-
-export const getVideosFiltrados = (
-  selectedCategory: string,
-  existingVideos: Ivideos[]
-): Ivideos[] => {
-  if (!selectedCategory) return existingVideos
-  return existingVideos.filter(video => video.categoria === selectedCategory)
-}
-
 export const ListagemVideos = () => {
 
-  const videos = UseVideos();
+  const videos = useVideos();
+
+  const { showModal, handleOpenModal, handleCloseModal } = useModal();
 
   const [selectedCategory, setselectedCategory] = useState('');
 
@@ -70,13 +51,13 @@ export const ListagemVideos = () => {
     setselectedCategory(categoria);
   };
 
-  const videosFiltrados = getVideosFiltrados(selectedCategory, videos);
+  const videosFiltrados = useFiltrarVideos(selectedCategory, videos);
 
   return (
     <Container>
       <ContainerFiltros>
         <ContainerBotoes>
-          {categorias.map((categoria) => {
+          {dadosCategorias.map((categoria) => {
             const isActive = selectedCategory === categoria
 
             return (
@@ -84,14 +65,15 @@ export const ListagemVideos = () => {
             )
           })}
         </ContainerBotoes>
-        <SelectFiltro/>
+        <SelectFiltro />
       </ContainerFiltros>
       <ContainerVideos>
         {videosFiltrados.map((video, index) => (
-          <CardVideo key={index} title={video.titulo} content='conteúdo' />
+          <CardVideo onClick={handleOpenModal} key={index} title={video.titulo} />
         ))}
+        {showModal && <Modal onClose={handleCloseModal}/> }
       </ContainerVideos>
-      <Paginacao quantidade={4}/>
+      <Paginacao quantidade={4} />
     </Container>
   )
 }

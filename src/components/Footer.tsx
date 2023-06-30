@@ -81,6 +81,7 @@ const FooterBot = styled.div`
   justify-content: center;
   align-items: center;
   padding: 27px 0px;
+  border-top: solid 1px #e0dfdf;
 `
 
 const ParagrafoTemos = styled.p`

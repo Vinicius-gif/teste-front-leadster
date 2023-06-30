@@ -63,9 +63,14 @@ const CardTitle = styled.h2`
   }
 `;
 
-export const CardVideo = ({ title }: any) => {
+interface Props {
+  title: string;
+  onClick: () => void;
+}
+
+export const CardVideo = ({ title, onClick }: Props) => {
   return (
-    <CardContainer>
+    <CardContainer onClick={onClick}>
       <ContainerThumb>
 
         <ImagemThumb>
