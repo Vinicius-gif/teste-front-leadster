@@ -22,6 +22,11 @@ const Paragrafo1 = styled.h2`
   font-weight: 600;
   font-size: 40px;
   color: var(--preto);
+  
+  @media (max-width: 600px) {
+    font-size: 30px;
+    text-align: center;
+  }
 `
 const Paragrafo2 = styled.h2`
   background: linear-gradient(-45deg, #2c83fb, #1f76f0);
@@ -29,17 +34,36 @@ const Paragrafo2 = styled.h2`
   -webkit-text-fill-color: transparent;
   font-weight: 600;
   font-size: 65px;
+  padding-bottom: 20px;
   border-bottom: solid 1px #cac1c1;
+
+  @media (max-width: 600px) {
+    font-size: 40px;
+    text-align: center;
+  }
 `
 const Icone = styled.img`
   margin-left: -28px;
   vertical-align: text-top;
+  width: 50px;
+  height: 32px;
+
+  @media (max-width: 600px) {
+    width: 40px;
+    height: 22px;
+    margin-left: -22px;
+  }
 `
 const Paragrafo3 = styled.p`
   font-weight: 400;
   font-size: 13px;
   color: var(--preto);
   padding-top: 15px;
+
+  @media (max-width: 600px) {
+    font-size: 11px;
+    text-align: center;
+  }
 `
 
 export const Banner1 = () => {

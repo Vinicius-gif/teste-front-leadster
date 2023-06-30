@@ -9,6 +9,7 @@ const Botao = styled.button`
   border: none;
   border-radius: 3px;
   padding: 5px;
+  cursor: pointer;
 
   display: flex;
   justify-content: center;
