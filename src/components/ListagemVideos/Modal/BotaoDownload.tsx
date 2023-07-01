@@ -18,6 +18,10 @@ const Botao = styled.button`
   > * {
     margin: 5px;
   }
+
+  @media (max-width: 600px) {
+    flex-wrap: wrap;
+  }
 `
 
 interface Props {

@@ -7,6 +7,10 @@ const CardContainer = styled.div`
   height: 300px;
   margin: 5px;
   cursor: pointer;
+
+  @media (max-width: 600px) {
+    margin: 15px;
+  }
 `;
 
 const ContainerThumb = styled.div`

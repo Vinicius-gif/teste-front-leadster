@@ -1,6 +1,5 @@
 import { styled } from "styled-components";
 
-
 interface ButtonProps {
   $clicked: boolean;
 }
@@ -15,10 +14,10 @@ const Botao = styled.button<ButtonProps>`
   border-radius: 16px;
   color:  ${(props) => (props.$clicked ? '#eceef0' : 'var(--preto)')};
   padding: 5px 10px;
-  margin: 0px 5px;
+  margin: 5px;
   height: 40px;
   cursor: pointer;
-  
+
   &:hover {
     border-color: ${(props) => (props.$clicked ? 'none' : 'var(--azul)')};
     color: ${(props) => (props.$clicked ? 'none' : 'var(--azul)')};
@@ -29,10 +28,9 @@ interface Props {
   $clicked: boolean,
   onClick: () => void,
   children: any
-
 }
 
-export const BotaoFiltro = ({$clicked, children, onClick} : Props) => {
+export const BotaoFiltro = ({ $clicked, children, onClick }: Props) => {
   return (
     <Botao $clicked={$clicked} onClick={onClick}>{children}</Botao>
   )

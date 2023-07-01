@@ -19,6 +19,12 @@ const ModalCard = styled.div`
   border-radius: 8px;
   width: 600px;
   height: 700px;
+
+  @media (max-width: 600px) {
+    width: 100%;
+    height: 80%;
+    margin: 15px;
+  }
 `;
 
 const ContainerExit = styled.div`
@@ -37,6 +43,11 @@ const TituloModal = styled.h2`
 
   & span {
     color: var(--azul);
+  }
+
+  @media (max-width: 600px) {
+    text-align: start;
+    padding: 0px;
   }
 `
 

@@ -6,6 +6,11 @@ const Container = styled.section`
   align-items: center;
   width: 30%;
   color: var(--preto);
+
+  @media (max-width: 600px) {
+    width: 100%;
+    margin: 10px 10%;
+  }
 `
 const Paragrafo = styled.p`
   font-weight: 500;

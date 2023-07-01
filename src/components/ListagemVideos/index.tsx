@@ -14,15 +14,31 @@ import { Modal } from "./Modal"
 
 const Container = styled.div`
   margin: 3% 18%;
+
+  @media (max-width: 600px) {
+    margin: 0%;
+  }
 `
 
 const ContainerFiltros = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media (max-width: 600px) {
+    flex-flow: row wrap;
+    justify-content: center;
+  }
 `
 
-const ContainerBotoes = styled.section``
+const ContainerBotoes = styled.section`
+
+  @media (max-width: 600px) {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+  }
+`
 
 const ContainerVideos = styled.div`
   display: grid;
@@ -33,6 +49,12 @@ const ContainerVideos = styled.div`
   border-bottom: solid 1px #c7bfbf;
   border-top: solid 1px #c7bfbf;
   padding: 40px 0px;
+
+  @media (max-width: 600px) {
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
+  }
 `
 
 export const ListagemVideos = () => {
