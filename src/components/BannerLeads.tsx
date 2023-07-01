@@ -99,15 +99,12 @@ const ContainerAvaliacao = styled.div`
     @media (max-width: 600px) {
       flex-wrap: wrap;
       justify-content: center;
+      margin-bottom: 20px;
     }
 `
 const Paragrafo = styled.p`
   margin-left: 5px;
   margin-right: 5px;
-
-  @media (max-width: 600px) {
-    
-  }
 `
 export const BannerLeads = () => {
   return (

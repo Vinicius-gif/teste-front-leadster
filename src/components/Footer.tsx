@@ -41,6 +41,11 @@ const ListagemLinks = styled.div`
 const ListaLinks = styled.div`
   display: flex;
   flex-direction: column;
+
+  @media (max-width: 600px) {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
 `
 const TituloLinks = styled.p`
   color: var(--preto);
@@ -55,6 +60,10 @@ const LinkCustom = styled(Link)`
   padding-top: 12px;
   padding-bottom: 12px;
   font-size: 16px;
+
+  @media (max-width: 600px) {
+    font-size: 12px;
+  }
 
   &:hover {
     color: var(--azul);
@@ -74,7 +83,12 @@ const ParagrafoContatos = styled.div`
 
   & p {
     margin: 10px;
+
+    @media (max-width: 600px) {
+      margin: 10px 0px;
+    }
   }
+  
 `
 const FooterBot = styled.div`
   display: flex;
@@ -129,9 +143,9 @@ export const Footer = () => {
             <ListaLinks>
               <TituloLinks>Siga a Leadster</TituloLinks>
               <IconesRedes>
-              <BsFacebook color="var(--cinza)" size={30} />
-              <BsLinkedin color="var(--cinza)" size={30} />
-              <BsInstagram color="var(--cinza)" size={30} />
+                <BsFacebook color="var(--cinza)" size={30} />
+                <BsLinkedin color="var(--cinza)" size={30} />
+                <BsInstagram color="var(--cinza)" size={30} />
               </IconesRedes>
               <ParagrafoContatos>
                 <p>E-mail: <LinkCustom href="">contato@leadster.com.br</LinkCustom></p>
