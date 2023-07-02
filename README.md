@@ -2,7 +2,7 @@
   Desafio para vaga de desenvolvedor front-end. Foi desenvolvida uma landing page de listagem de vídeos.
 
 
-  Você pode acessar o deploy deste projeto no [Vercel](https://landing-leadster.vercel.app/)
+  Você pode acessar o deploy deste projeto no [Vercel](https://teste-front-leadster.vercel.app/)
 
 
 ### Tecnologias Utilizadas
