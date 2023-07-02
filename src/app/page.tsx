@@ -1,4 +1,4 @@
-'use client'
+"use client"
 
 import { Banner1 } from "@/components/Banner1"
 import { BannerLeads } from "@/components/BannerLeads"

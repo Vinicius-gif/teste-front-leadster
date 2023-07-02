@@ -30,11 +30,10 @@ const ImagemComparativo = styled.img`
 const ContainerLeads = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
 
   @media (max-width: 600px) {
-    
+    align-items: center;
   }
 `
 
